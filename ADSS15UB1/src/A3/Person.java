@@ -13,12 +13,12 @@ public abstract class Person {
 	private int alter;
 	private int groesse, gewicht;
 	
-	public Person(String name, int alter, int gewicht, int groesse) {
+	public Person(String name, int alter, int groesse, int gewicht) {
 		
 		this.name=name;
 		this.alter=alter;
-		this.gewicht=gewicht;
 		this.groesse=groesse;
+		this.gewicht=gewicht;
 		anzahl++;
 	}
 	
@@ -37,7 +37,18 @@ public abstract class Person {
 	}
 	
 	public boolean istVolljaehrig(){
-		return volljaehrigkeitsAlter()>=alter() ? true : false;
+/**
+ * 	
+ 
+		if (alter()<18) {
+			return false;
+		}
+		else {
+			return true;
+		}
+		
+		*/
+		return (alter()<18) ? false : true;
 	}
 	
 	public int groesse() {

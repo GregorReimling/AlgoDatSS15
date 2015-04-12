@@ -23,7 +23,7 @@ public class Mann extends Person {
 	}
 	
 	public int preisHaarschnitt() {
-		return 10 +(int) (0.25*alter());
+		return (int)Math.round(10 + (0.25*super.alter())) ;
 	}
 	
 	

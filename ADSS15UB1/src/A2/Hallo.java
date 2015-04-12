@@ -12,19 +12,20 @@ public class Hallo {
 		
 	}
 	
-	public static String Hallo() {
+	public static String hallo() {
 		return "Hallo Welt!";
 	}
 	
-	public static String Hallo(String zk) {
+	public static String hallo(String zk) {
 		return "Hallo " + zk + "!";
 	}
 	
-/**
- * 	public static void main(String [] args) {
- 
-		System.out.println(Hallo());
-		System.out.println(Hallo("test"));
+
+ 	public static void main(String [] args) {
+	 
+			System.out.println(hallo());
+			System.out.println(hallo("test"));
 	}
-*/
+
+	
 }

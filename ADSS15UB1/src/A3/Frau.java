@@ -24,9 +24,13 @@ public class Frau extends Person {
 	}
 	
 	public int preisHaarschnitt() {
-		return 20 + (int)(0.66*alter());
+		//return 20 + (int)(0.66*alter());
+		return (int)Math.round(20 + (0.67*super.alter()));
 	}
 	
+	public static int anzahl() {
+		return anzahl;
+	}
 	
 
 }
