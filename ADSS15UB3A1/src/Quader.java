@@ -40,10 +40,10 @@ public class Quader extends Koerper{
 	
 	public boolean enthaelt(Punkt p) {
 		
-		double erg=0;
+		//double erg=0;
 		//System.out.println("Vor Initialisierung: " + erg);
 		//erg=((super.bp().x()-p.x())*2)+((super.bp().y()-p.y())*2)+((super.bp().z()-p.z())*2);
-		erg=(((p.x()-b)*2)+((p.y()-t)*2)+(p.z()*h)*2);
+		//erg=(((p.x()-b)*2)+((p.y()-t)*2)+(p.z()*h)*2);
 		
 		if (p.x()<super.bp().x()) {
 			return false;

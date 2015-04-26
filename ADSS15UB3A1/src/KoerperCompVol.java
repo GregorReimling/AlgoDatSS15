@@ -34,6 +34,15 @@ public class KoerperCompVol implements Skalierbar, Comparable {
 	public double durchmesser() {
 		return this.k.durchmesser();
 	}
+	
+	public void verschiebe(double deltax, double deltay, double deltaz) {
+		this.k.verschiebe(deltax, deltay, deltaz);
+	}
+	
+	public boolean enthaelt(Punkt p) {
+		return this.k.enthaelt(p);
+	}
+	
 	//hier wird der Comparator zum vergleichen der einzelnen Koerper Elemente anhand der Volumen implementiert
 	public int compareTo(Object o) {
 		if (this.k.volumen()>((KoerperCompVol)o).volumen()) {
