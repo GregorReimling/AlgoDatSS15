@@ -39,17 +39,29 @@ public class Kugel extends Koerper{
 	//Wurzel aus ((x-x)*2+(y-y)*2+(z-z)*2)
 	public boolean enthaelt(Punkt p) {
 		
-		double erg=0;
-		erg=Math.sqrt((p.x()-p.x()*2)+(p.y()-p.y()*2)+p.z()*p.z()*2);
-		
-		if (erg<=r){
-			return true;
+//		if(Math.sqrt(Math.pow(p.x() - this.bp().x(), 2) + Math.pow(p.y() - this.bp().y(), 2) + Math.pow(p.z() - this.bp().z(), 2)) <= this.r)
+//		return true;
+//		return false;
+		double absX = this.bp().getX() - p.getX();
+		double absY = this.bp().getY() - p.getY();
+		double absZ = this.bp().getZ() - p.getZ();
+		boolean isOutside = Math.sqrt(Math.pow(absX, 2) + Math.pow(absY, 2) + Math.pow(absZ, 2)) > r;
+			
+		return !isOutside;
 		}
-		else {
-			return false;
-		}
+
+//		
+//		double erg=0;
+//		erg=Math.sqrt((p.x()-p.x()*2)+(p.y()-p.y()*2)+p.z()*p.z()*2);
+//		
+//		if (erg<=r){
+//			return true;
+//		}
+//		else {
+//			return false;
+//		}
 		
 		
 	}
 
-}
+

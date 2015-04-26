@@ -42,13 +42,12 @@ public class KoerperCompVol implements Skalierbar, Comparable {
 	public boolean enthaelt(Punkt p) {
 		return this.k.enthaelt(p);
 	}
-	
 	//hier wird der Comparator zum vergleichen der einzelnen Koerper Elemente anhand der Volumen implementiert
 	public int compareTo(Object o) {
-		if (this.k.volumen()>((KoerperCompVol)o).volumen()) {
+		if (this.k.volumen()<((KoerperCompVol)o).volumen()) {
 			return -1;
 		}
-		else if (this.k.volumen()<((KoerperCompVol)o).volumen()) {
+		else if (this.k.volumen()>((KoerperCompVol)o).volumen()) {
 			return 1;
 		}
 		else {

@@ -12,11 +12,11 @@ public abstract class Koerper implements Skalierbar {
 	}
 	
 	public Punkt bp() {
-		return this.bp;
+		return this.getBp();
 	}
 	
 	public void verschiebe(double deltax, double deltay, double deltaz) {
-		bp.verschiebe(deltax, deltay, deltaz);
+		getBp().verschiebe(deltax, deltay, deltaz);
 	}
 	
 	public abstract double volumen();
@@ -28,6 +28,17 @@ public abstract class Koerper implements Skalierbar {
 	public abstract void skaliere(double a);
 	
 	public abstract boolean enthaelt(Punkt p);
+
+	public Punkt getBp() {
+		return bp;
+		
+	}
+	
+    static boolean between(double a, double min, double max) {
+        if (a >= min && a <= max) return true;
+        return false;
+    }
+
 	
 	
 	

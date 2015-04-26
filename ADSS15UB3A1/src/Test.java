@@ -26,7 +26,7 @@ public class Test {
 	    quader1.enthaelt(bp3);
 	    bp1.verschiebe(1, 2, 3);
 	    bp3.verschiebe(10, 20, 30);
-	    kugel1.enthaelt(bp1);
+	    System.out.println(kugel1.enthaelt(bp1));
 	    Comparable[] b = new KoerperCompVol[]{
 	    		new KoerperCompVol(new Kugel(new Punkt(3, 2, 1), 3)),
 	            new KoerperCompVol(new Quader(new Punkt(4, 1, 8), 6, 2, 5)),
